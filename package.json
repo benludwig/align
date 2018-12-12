@@ -1,0 +1,12 @@
+{
+  "name": "align",
+  "vapid": {
+    "site": "d70db2b9-b28c-4642-8777-14a68c94b889"
+  },
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "vapid-cli": "^0.3.5"
+  }
+}
