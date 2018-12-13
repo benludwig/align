@@ -1,6 +1,110 @@
+/*Primary Colors----------------------
+------------------------------------*/
+$color-sky-blue: #00AAF4;
+$color-field-green: #00D258;
+
+/*Secondary Colors--------------------
+------------------------------------*/
+$color-deep-sky-blue: #009AE0;
+$color-light-sky-blue: #80D5F9;
+$color-deep-field-green: #00A846;
+$color-light-field-green: #80E9AB;
+$color-royal-blue: #0F155B;
+$color-river-blue: #285A93;
+$color-ocean-green: #028399;
 $color-night-grey: #202020;
-$color-azure: #f2f6f7;
+$color-slate-grey: #455051;
 $color-pebble-grey: #828E96;
+$color-foggy-grey: #B9C9D2;
+$color-white-smoke: #EBEFF0;
+$color-azure: #f2f6f7; /*ADD TO STYLEGUIDE*/
+$color-white: #FFFFFF;
+
+/*Tertiary Colors---------------------
+------------------------------------*/
+$color-tropical-rain-forest: #017F58;
+$color-byzantium: #6D1F7E;
+$color-persian-red: #C63C34;
+$color-raspberry-pink: #E73E97;
+$color-cyan: #00AEEF;
+$color-bronze: #CD7F2E;
+$color-deep-saffron: #FF9E25;
+$color-yellow-orange: #FCB034;
+
+/*Typography--------------------------
+------------------------------------*/
+
+@font-face {
+  font-family: "C-Regular";
+  src: url('../fonts/37BCD3_9_0.woff');
+  }
+
+@font-face {
+  font-family: "C-Medium";
+  src: url('../fonts/37BCD3_5_0.woff');
+  }
+
+@font-face {
+  font-family: "C-Bold";
+  src: url('../fonts/37BCD3_6_0.woff');
+  }
+
+html {
+  font-family: "C-Regular";
+  font-size: 16px;
+  line-height:1.25;
+  box-sizing: border-box;
+  }
+
+h1 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  color: $color-deep-sky-blue;
+  padding-bottom: 10px;
+  }
+
+h2 {
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  }
+
+h3 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  }
+
+h4 {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  }
+
+h5 {
+  font-weight: normal;
+  font-family: "C-Medium";
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  }
+
+h1.eyebrow {
+  font-weight: normal;
+  font-family: "C-Bold";
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  }
+
+
+
 
 
 
@@ -12,17 +116,9 @@ $color-pebble-grey: #828E96;
   box-sizing: inherit;
   }
 
-@font-face {
-  font-family: "cera_regular";
-  src: url('../fonts/37BCD3_9_0.woff');
-  }
 
-html {
-  font-family: "cera_regular";
-  font-size: 16px;
-  line-height:1.25;
-  box-sizing: border-box;
-  }
+
+
 
 body {
   color: $color-night-grey;
@@ -48,12 +144,12 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: $color-white;
   }
 
 .two_panel_image {
   width:100%;
-  min-height:200px;
+  min-height:140px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -64,14 +160,6 @@ body {
 .two_panel_content {
   padding: 20px;
   text-align: center;
-  }
-
-.two_panel_headline {
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: -0.6px;
-  color: #009ae0;
-  padding-bottom:10px;
   }
 
 /*Text Callout------------------------
@@ -131,6 +219,12 @@ body {
 
 
 
+/*Small-------------------------------
+------------------------------------*/
+
+
+
+
 
 
 
@@ -143,7 +237,7 @@ body {
   ------------------------------------*/
   .two_panel {
     flex-direction: row;
-    min-height: 500px;
+    min-height: 350px;
     }
   .two_panel_image,
   .two_panel_content {
@@ -170,5 +264,56 @@ body {
   ------------------------------------*/
   .four_up {
     display: flex;
+    }
+  .four_up_block {
+    width: 25%;
+    height: auto;
+    }
+  }
+
+
+/*Large-------------------------------
+------------------------------------*/
+
+@media screen and (min-width: 996px) {
+  /*Typography--------------------------
+  ------------------------------------*/
+  h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    }
+
+  h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    }
+
+  h3 {
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    }
+
+  h4 {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    }
+
+  h5 {
+    font-family: "C-Medium";
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    }
+
+  h1.eyebrow {
+    font-family: "C-Bold";
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
     }
   }
