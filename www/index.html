@@ -4,30 +4,57 @@
   <title>Align</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans:400,800" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 </head>
 <body>
   <div class="page">
-
-    {{#if page_title}}
-    {{page_title required=false}}
-    {{/if}}
+    {{#if page_title}}{{page_title required=false}}{{/if}}
 
     {{#section two_panel}}
-    <div class="content_pod">
-        <div class="content_pod_image" style="background-image: url({{image type=image tag=false required=false}})"></div>
-        <div class="content_pod_content">
-          <div class="content_pod_content_inside">
-            <div class="headline">{{#if headline}}{{headline required=false}}{{/if}}</div>
-            <div class="copy">{{#if copy}}{{copy type=html editor=wysiwyg required=false}}{{/if}}</div>
+    <div class="two_panel_parent">
+    <div class="two_panel">
+        <div class="two_panel_image" style="background-image: url({{two_panel_image type=image tag=false required=false}})"></div>
+        <div class="two_panel_content">
+          <div class="two_panel_content_inside">
+            <div class="two_panel_headline">{{#if two_panel_headline}}{{two_panel_headline required=false}}{{/if}}</div>
+            <div class="two_panel_copy">{{#if two_panel_copy}}{{two_panel_copy type=html editor=wysiwyg required=false}}{{/if}}</div>
           </div>
       </div>
+    </div>
     </div>
     {{/section}}
 
     {{#section text_callout}}
-    {{#if copy}}{{copy type=html editor=wysiwyg required=false}}{{/if}}
+    <div class="text_callout">
+    {{#if text_callout_copy}}{{text_callout_copy type=html editor=wysiwyg required=false}}{{/if}}
+    </div>
+    {{/section}}
+
+    {{#section 4_up}}
+    <div class="4_up_parent">
+      <div class="4_up">
+        <div class="4_up_block">
+          <div class="4_up_image">{{#if 4_up_image_1}}{{4_up_image_1 type=image required=false}}{{/if}}</div>
+          <div class="4_up_title">{{#if 4_up_title_1}}{{4_up_title_1 required=false}}{{/if}}</div>
+          <div class="4_up_copy">{{#if 4_up_copy_1}}{{4_up_copy_1 required=false}}{{/if}}</div>
+        </div>
+        <div class="4_up_block">
+          <div class="4_up_image">{{#if 4_up_image_2}}{{4_up_image_2 type=image required=false}}{{/if}}</div>
+          <div class="4_up_title">{{#if 4_up_title_2}}{{4_up_title_2 required=false}}{{/if}}</div>
+          <div class="4_up_copy">{{#if 4_up_copy_2}}{{4_up_copy_2 required=false}}{{/if}}</div>
+        </div>
+        <div class="4_up_block">
+          <div class="4_up_image">{{#if 4_up_image_3}}{{4_up_image_3 type=image required=false}}{{/if}}</div>
+          <div class="4_up_title">{{#if 4_up_title_3}}{{4_up_title_3 required=false}}{{/if}}</div>
+          <div class="4_up_copy">{{#if 4_up_copy_3}}{{4_up_copy_3 required=false}}{{/if}}</div>
+        </div>
+        <div class="4_up_block">
+          <div class="4_up_image">{{#if 4_up_image_4}}{{4_up_image_4 type=image required=false}}{{/if}}</div>
+          <div class="4_up_title">{{#if 4_up_title_4}}{{4_up_title_4 required=false}}{{/if}}</div>
+          <div class="4_up_copy">{{#if 4_up_copy_4}}{{4_up_copy_4 required=false}}{{/if}}</div>
+        </div>
+      </div>
+    </div>
     {{/section}}
 
   </div>

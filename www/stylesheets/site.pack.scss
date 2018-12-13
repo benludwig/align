@@ -1,3 +1,11 @@
+$color-night-grey: #202020;
+$color-azure: #f2f6f7;
+$color-pebble-grey: #828E96;
+
+
+
+
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -17,25 +25,33 @@ html {
   }
 
 body {
-  color: #202020;
-  background-color: #f2f6f7;
+  color: $color-night-grey;
+  background-color: $color-pebble-grey;
   }
 
 .page {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  background-color: $color-azure;
+  min-height: 100vh;
   }
 
-.content_pod {
+/*Two Panel---------------------------
+------------------------------------*/
+
+.two_panel_parent {
+  padding: 10px;
+  }
+
+.two_panel {
   display: flex;
   flex-direction: column;
-  margin: 10px;
   border-radius: 6px;
   background-color: #fff;
   }
 
-.content_pod_image {
+.two_panel_image {
   width:100%;
   min-height:200px;
   background-repeat: no-repeat;
@@ -45,12 +61,12 @@ body {
   border-top-right-radius: 6px;
   }
 
-.content_pod_content {
+.two_panel_content {
   padding: 20px;
   text-align: center;
   }
 
-.headline {
+.two_panel_headline {
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: -0.6px;
@@ -58,30 +74,47 @@ body {
   padding-bottom:10px;
   }
 
+/*Text Callout------------------------
+------------------------------------*/
+
+.text_callout {
+  padding: 20px;
+  text-align:center;
+  }
+
+
+
+
+
+/*Tablet------------------------------
+------------------------------------*/
+
 @media screen and (min-width: 768px) {
-  .content_pod {
+  /*Two Panel---------------------------
+  ------------------------------------*/
+  .two_panel {
     flex-direction: row;
     min-height: 500px;
     }
-  .content_pod_image,
-  .content_pod_content {
+  .two_panel_image,
+  .two_panel_content {
     width: 50%;
     }
-  .content_pod_image {
+  .two_panel_image {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 6px;
     }
-  .content_pod_content {
+  .two_panel_content {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
     padding: 40px;
     }
-  .content_pod_content_inside {
+  .two_panel_content_inside {
     max-width: 500px;
     }
-  .headline {
+  .two_panel_headline {
     font-size: 48px;
     }
   }
