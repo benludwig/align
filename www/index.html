@@ -9,21 +9,27 @@
 </head>
 <body>
   <div class="page">
-    {{page_title}}
+
+    {{#if page_title}}
+    {{page_title required=false}}
+    {{/if}}
+
     {{#section two_panel}}
     <div class="content_pod">
         <div class="content_pod_image" style="background-image: url({{image type=image tag=false required=false}})"></div>
         <div class="content_pod_content">
           <div class="content_pod_content_inside">
-            <div class="headline">{{headline}}</div>
-            <div class="copy">{{copy type=html editor=wysiwyg required=false}}</div>
+            <div class="headline">{{#if headline}}{{headline required=false}}{{/if}}</div>
+            <div class="copy">{{#if copy}}{{copy type=html editor=wysiwyg required=false}}{{/if}}</div>
           </div>
       </div>
     </div>
     {{/section}}
+
     {{#section text_callout}}
-    {{copy type=html editor=wysiwyg required=false}}
+    {{#if copy}}{{copy type=html editor=wysiwyg required=false}}{{/if}}
     {{/section}}
+
   </div>
   <script src="/javascripts/site.js"></script>
 </body>
