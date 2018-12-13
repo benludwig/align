@@ -82,6 +82,55 @@ body {
   text-align:center;
   }
 
+/*Four-Up-----------------------------
+------------------------------------*/
+
+.four_up_parent {
+  padding: 10px;
+  }
+
+.four_up {
+  background-color: #ffffff;
+  border-radius: 6px;
+  }
+
+.four_up_block {
+  padding: 20px 0 20px 0;
+  }
+
+.four_up_image {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  }
+
+.four_up_image img {
+  width: 50px;
+  min-height: 50px;
+  }
+
+.four_up_title,
+.four_up_copy {
+  text-align: center;
+  padding: 0 15% 0 15%;
+  }
+
+.four_up_title {
+  padding-bottom: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -116,5 +165,10 @@ body {
     }
   .two_panel_headline {
     font-size: 48px;
+    }
+  /*Two Panel---------------------------
+  ------------------------------------*/
+  .four_up {
+    display: flex;
     }
   }
